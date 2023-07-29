@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import cl.individual.viernes280723.data.local.BarDao
 import cl.individual.viernes280723.data.local.Item
 
-class Repositorio (private val barDao : BarDao) {
+class Repositorio(private val barDao: BarDao) {
 
-    suspend fun insertItem(item: Item){
+    suspend fun insertItem(item: Item) {
         barDao.insertItem(item)
     }
 
