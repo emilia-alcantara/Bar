@@ -11,4 +11,7 @@
     <string name="app_title">Registro</string>
     <string name="btn_guardar">Guardar</string>
     <string name="total">Total</string>
+    <string name="success_message">Información guardada con éxito.</string>
+    <string name="productos_agregados">Productos Agregados</string>
+    <string name="boton_agregar">Botón agregar</string>
 </resources>
