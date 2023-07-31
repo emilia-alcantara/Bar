@@ -24,6 +24,13 @@ class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
         val barItem = barItems[position]
         holder.bind(barItem)
     }
+
+    fun setData(barItems: List<BarItem>) {
+        this.barItems = barItems
+        notifyDataSetChanged()
+
+    }
+
     class BarViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(barItem: BarItem) {
             binding.txtProdName.text = barItem.producto
