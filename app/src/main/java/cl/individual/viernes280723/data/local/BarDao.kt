@@ -9,9 +9,9 @@ import androidx.room.Query
 interface BarDao {
 
     @Insert
-    suspend fun insertItem(item: Item)
+    suspend fun insertItem(barItem: BarItem)
 
     @Query ("SELECT * FROM tabla_item ORDER BY id ASC")
-    fun getItemList(): LiveData<List<Item>>
+    fun getItemList(): LiveData<List<BarItem>>
 
 }

@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import cl.individual.viernes280723.data.Repositorio
 import cl.individual.viernes280723.data.local.BarDatabase
-import cl.individual.viernes280723.data.local.Item
+import cl.individual.viernes280723.data.local.BarItem
 import kotlinx.coroutines.launch
 
 class BarViewModel (app: Application) : AndroidViewModel(app){
@@ -17,12 +17,12 @@ class BarViewModel (app: Application) : AndroidViewModel(app){
         repositorio = Repositorio(dao)
     }
 
-    fun getItemList(): LiveData<List<Item>> {
+    fun getItemList(): LiveData<List<BarItem>> {
         return repositorio.getItemList()
     }
 
     fun insertItem(producto:String, precio: Int, cantidad : Int) = viewModelScope.launch {
-        val item = Item(producto, precio, cantidad)
-        repositorio.insertItem(item)
+        val barItem = BarItem(producto, precio, cantidad)
+        repositorio.insertItem(barItem)
     }
 }
