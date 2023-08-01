@@ -5,32 +5,23 @@
     android:id="@+id/listFragLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#393646"
+    android:textAlignment="textStart"
     tools:context=".vista.listing.ListFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/listFragToolbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:background="#29B691"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txtListToolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/productos_agregados"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/listFragToolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/listFragToolbar" />
+        app:layout_constraintVertical_bias="0.0"
+        app:title="@string/productos_agregados"
+        app:titleTextAppearance="@style/my_toolbar_text_style" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recAddedProducts"
@@ -48,12 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:contentDescription="@string/boton_agregar"
         android:src="@drawable/baseline_add_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listFragToolbar"
-        app:layout_constraintVertical_bias="0.97"
-        android:contentDescription="@string/boton_agregar" />
+        app:layout_constraintVertical_bias="0.97" />
 </androidx.constraintlayout.widget.ConstraintLayout>

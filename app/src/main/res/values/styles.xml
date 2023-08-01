@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="cada_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/farro_medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="hints_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/farro_medium</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">#70FFFFFF</item>
+    </style>
+
+    <style name="my_toolbar_text_style">
+        <item name="android:fontFamily">@font/farro_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="btn_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">#29B691</item>
+        <item name="android:fontFamily">@font/farro_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingHorizontal">23dp</item>
+
+    </style>
+
+
+</resources>
