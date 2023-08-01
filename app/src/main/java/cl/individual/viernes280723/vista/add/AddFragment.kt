@@ -1,6 +1,8 @@
 package cl.individual.viernes280723.vista.add
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,12 +23,40 @@ class AddFragment : Fragment() {
     ): View? {
 
         binding = FragmentAddBinding.inflate(inflater, container, false)
-        initListeners()
+        initTextWatcher()
+        initListener()
+
 
         return binding.root
     }
 
-    private fun initListeners() {
+    private fun initTextWatcher() {
+        val textWatcher = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                val cant = binding.editCant.text.toString()
+                val price = binding.editPrice.text.toString()
+
+                val cantidad = if (cant.isNotEmpty()) cant.toInt() else 0
+                val precio = if (price.isNotEmpty()) price.toInt() else 0
+                val total = cantidad * precio
+
+                binding.txtTotalNum.text = total.toString()
+            }
+
+        }
+
+        binding.editCant.addTextChangedListener(textWatcher)
+    }
+
+    private fun initListener() {
         binding.btnSave.setOnClickListener{
             val producto = binding.editProduct.text.toString()
             val cantidad = binding.editCant.text.toString().toInt()
@@ -38,6 +68,7 @@ class AddFragment : Fragment() {
             cleanUI()
 
         }
+
     }
 
     private fun showSuccessMessage() {
