@@ -13,7 +13,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+
+        app:cardBackgroundColor="#203841"
         app:cardCornerRadius="8dp"
+        app:cardElevation="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +29,7 @@
 
             <TextView
                 android:id="@+id/txtProdName"
+                style="@style/cada_item_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/item_producto"
@@ -38,6 +42,7 @@
 
             <TextView
                 android:id="@+id/txtProdPrice"
+                style="@style/cada_item_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/item_precio"
@@ -48,6 +53,7 @@
 
             <TextView
                 android:id="@+id/txtItemCant"
+                style="@style/cada_item_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cantidad"
@@ -59,6 +65,7 @@
 
             <TextView
                 android:id="@+id/txtItemTotal"
+                style="@style/cada_item_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total"

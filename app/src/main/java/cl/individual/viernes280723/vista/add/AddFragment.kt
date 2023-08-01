@@ -62,7 +62,7 @@ class AddFragment : Fragment() {
             val cantidad = binding.editCant.text.toString().toInt()
             val precio = binding.editPrice.text.toString().toInt()
 
-            viewModel.insertItem(producto, cantidad, precio)
+            viewModel.insertItem(producto, precio, cantidad)
 
             showSuccessMessage()
             cleanUI()

@@ -34,9 +34,9 @@ class BarAdapter: RecyclerView.Adapter<BarAdapter.BarViewHolder>() {
     class BarViewHolder(val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(barItem: BarItem) {
             binding.txtProdName.text = barItem.producto
-            binding.txtProdPrice.text = barItem.precio.toString()
-            binding.txtItemCant.text = barItem.cantidad.toString()
-            binding.txtItemTotal.text = (barItem.precio * barItem.cantidad).toString()
+            binding.txtProdPrice.text = "$ ${barItem.precio}"
+            binding.txtItemCant.text = "${barItem.cantidad} (unidades)"
+            binding.txtItemTotal.text = "$ ${(barItem.precio * barItem.cantidad)}"
         }
 
     }
